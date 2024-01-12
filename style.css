@@ -167,8 +167,9 @@ main{
     background-color: black;
     color: white;
     cursor: pointer;
+    transition: all 0.2s ease-in-out;
 }
 
 .reset button:hover{
-    background-color: green;
+    background-color: rgba(0, 128, 0, 0.634);
 }
