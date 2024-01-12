@@ -4,7 +4,8 @@ let p = document.querySelector(".para");
 let textarea = document.querySelector("textarea");
 let color = document.querySelector("input");
 let reset = document.querySelector(".reset");
-let resetbtn = document.querySelector("#resets");
+// let resetbtn = document.querySelector("#resets");
+let right_cont = document.querySelector(".right_cont");
 
 button.addEventListener("click" , () => {
     if(textarea.value === ""){
@@ -40,12 +41,16 @@ button.addEventListener("click" , () => {
 
 
 
-notes.addEventListener("click" , (event) => {
+right_cont.addEventListener("click" , (event) => {
     
     if(event.target.innerText === "X"){
         event.target.parentElement.remove();
     }
-
+    if(event.target.innerText == "Delete all notes"){
+        while(notes.children.length !== 1){
+            notes.removeChild(notes.lastChild);
+       }
+    }
     if(notes.children.length === 1){
         p.style.display = "block";
         reset.style.display = "none";
@@ -55,16 +60,16 @@ notes.addEventListener("click" , (event) => {
 
 });
 
-resetbtn.addEventListener("click" , () => {
-    while(notes.children.length !== 1){
-         notes.removeChild(notes.lastChild);
-    }
-    if(notes.children.length === 1){
-        p.style.display = "block";
-        reset.style.display = "none";
-    }
+// resetbtn.addEventListener("click" , () => {
+//     while(notes.children.length !== 1){
+//          notes.removeChild(notes.lastChild);
+//     }
+//     if(notes.children.length === 1){
+//         p.style.display = "block";
+//         reset.style.display = "none";
+//     }
     
- });
+//  });
 
 
 

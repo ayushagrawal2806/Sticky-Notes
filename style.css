@@ -46,6 +46,12 @@ main{
     
 }
 
+.inputs textarea::-webkit-scrollbar{
+    display: none;
+}
+.inputs input{
+    cursor: pointer;
+}
 .button{
     width: 80%;
     margin-top: 2rem;
@@ -160,6 +166,7 @@ main{
     border: none;
     background-color: black;
     color: white;
+    cursor: pointer;
 }
 
 .reset button:hover{
